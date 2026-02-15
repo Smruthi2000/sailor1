@@ -17,7 +17,9 @@ pipeline{
         stage('checkout'){
             steps{
                 echo "${branch}"
-                git branch: 'main', url: 'https://github.com/Smruthi2000/sailor1.git'
+                git branch: params.BUILD_BRANCH, url: 'https://github.com/gopi720/sailor1.git'
+                
+                
             }
         }
         stage('build'){
